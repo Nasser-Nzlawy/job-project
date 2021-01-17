@@ -21,9 +21,6 @@ class Job(models.Model):
     image = models.ImageField(upload_to=image_upload)
     slug = models.SlugField(blank=True, null=True)
 
-    def save(self,*args, **kwargs):
-        self.slug = self.title
-        super(Job,self).save(*args, **kwargs)
     
     def __str__(self):
         return self.title
