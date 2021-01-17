@@ -25,7 +25,7 @@ class Job(models.Model):
     
     def save(self, *args, **kwargs):
        self.slug = slugify(self.title)
-       super(Job, self).save(*args, **kwargs)
+       super(Job,self).save(*args, **kwargs)
     
     def __str__(self):
         return self.title
