@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Job
 from django.core.paginator import Paginator
-from  .models import apply_form
+from  .form import ApplyForm
 # Create your views here.
 
 def job_list(request):
